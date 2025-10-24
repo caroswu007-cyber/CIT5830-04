@@ -18,7 +18,7 @@ with open('ape_abi.json', 'r') as f:
 api_url = "https://eth-mainnet.g.alchemy.com/v2/6O5ZMvvFpdCfTbTGVrVHB"  # YOU WILL NEED TO PROVIDE THE URL OF AN ETHEREUM NODE
 provider = HTTPProvider(api_url)
 web3 = Web3(provider)
-
+bayc = web3.eth.contract(address=contract_address, abi=abi)
 
 def get_ape_info(ape_id):
     """
